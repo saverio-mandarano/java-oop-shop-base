@@ -25,6 +25,13 @@ public class Product {
         this.iva = iva;
     }
 
+    public Product() {
+        // alla creazione nuovo prodotto il codice è valorizzato con un numero random
+        Random r = new Random();
+        int max = 10000000;
+        this.code = r.nextInt(max);
+    }
+
     // getter
     public String getName() {
         return this.name;
@@ -75,5 +82,23 @@ public class Product {
     }
 
     // setter
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setIva(BigDecimal iva) {
+        this.iva = iva;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 }
